@@ -17,10 +17,7 @@ class Leap:
     def __init__(self, thread: int, account: str, proxy : str):
         self.thread = thread
         self.name = account
-        if self.thread % 10 == 0:
-            self.ref = '6840081105'
-        else:
-            self.ref = config.REF_CODE
+        self.ref = config.REF_CODE
         if proxy:
             proxy_client = {
                 "scheme": config.PROXY_TYPE,
